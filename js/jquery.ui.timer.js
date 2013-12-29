@@ -3,7 +3,8 @@
         options: {
           initial_seconds: 0,
           hidden_selector: null,
-          autostart: true
+          autostart: true,
+          tcolor: 'gray'
         },
 
         _create: function() {
@@ -24,6 +25,10 @@
             if (this.options["autostart"]) {
                 this.start();
             }
+        },
+                
+        _init: function() {
+            $(this.element).css("background-color",this.options.tcolor);
         },
 
         refresh: function() {
